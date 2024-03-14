@@ -50,6 +50,17 @@ var ClientPartCall = {
   }
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  var audioElements = document.querySelectorAll('.client_aud_o');
+  audioElements.forEach(function(element) {
+    element.addEventListener('click', function() {
+      var audioUrl = element.getAttribute('data-pronunciation');
+      var audio = new Audio(audioUrl);
+      audio.play();
+    });
+  });
+});
+
 //]]>
 
 </script>
